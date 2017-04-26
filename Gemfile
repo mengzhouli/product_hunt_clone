@@ -18,8 +18,17 @@ gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'faker'
 
-group :development, :test do
+group :development do # Stuff you do not want in :test env
+  gem 'better_errors'
   gem 'binding_of_caller'
+end
+
+group :development, :test do
+ gem 'capybara'
+  gem 'poltergeist'
+  gem 'launchy'
+  gem 'minitest-reporters'
+ gem 'binding_of_caller'
   gem 'better_errors'
   
   gem 'pry-byebug'
